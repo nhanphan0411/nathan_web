@@ -8,12 +8,12 @@ p {
     background: transparent; */
 }
 
-.hero-container {
+#hero-container {
     margin: 0 auto;
     width: 100%;
 }
 
-.hero-images {
+#hero-images {
     height: 90vh;
 }
 

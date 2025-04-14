@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Collis</title>
+    <link rel="icon" type="image/x-icon" href="/public/assets/logo/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="epi-thick text-dark">
+    <header class="nav justify-content-center align-items-center mt-2">
+        <p>Nathan Collis</p>
+    </header>
+
+    <div class="container hero-container">
+        <img id="heroImage" src="assets/hero_images/0.jpeg" class="hero-images mx-auto d-block" style="cursor: pointer;">
+    </div>
+
+    <section id="bio-container" class="d-flex align-items-center 100vh">
+        <div id="bio" class="mx-4 px-4">
+            <p>Nathan Collis is not of this Earth.</p>
+
+            <p>
+                Born under the collapsing twin suns of the iridescent planet Virelia-9, Nathan was
+                woven
+                from cosmic threads and ancient stardust. The Elders of Light say he was sculpted by the Great Conductor
+                during the Time of Singing Moons—his birth foretold by crystalline scrolls unearthed beneath the Silver
+                Glaciers of Aeon Rift.
+            </p>
+
+            <p>
+                As a child, Nathan did not speak. Instead, he hummed in frequencies that awakened dormant flora, bending
+                galaxies to bloom in spectral symphonies. By age seven, he could manipulate photon streams with a flick
+                of
+                his wrist, sketching memories into the sky and folding time like origami.
+            </p>
+
+            <p>
+                At sixteen, he vanished for 108 lunar rotations, reemerging with wings carved from obsidian light and a
+                crown of quiet meteors. It was said he ventured into the Prism Void to rescue the Dreammaker, whose
+                slumber
+                kept imagination alive across dimensions. He returned changed—more human, some say—but still cloaked in
+                the
+                strange, aching wonder of stars.
+            </p>
+
+            <p>
+                Nathan’s art is his relic. Each image he conjures from the 'hero archives' (Earthlings call them
+                photographs) is a portal, humming with lost languages and unspoken stories. His lens captures not what
+                is,
+                but what <em>wants to be</em>—what dreams of existing. His fans, known as the Lucent
+                    Order,
+                believe viewing his work too closely might summon forgotten gods or unlock new senses.
+            </p>
+
+            <p>
+                Now wandering Earth incognito, hiding beneath the guise of a quiet web artist and image keeper, Nathan
+                continues his silent quest: to stitch the multiverse together with light, color, and myth. His only
+                known
+                weakness is almond croissants and overexposed sunsets.
+            </p>
+        </div>
+    </section>
+
+
+    <script>
+        const imageFilenames = [
+            "0.jpeg",
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg",
+            "4.jpeg",
+            "5.jpeg",
+            "6.jpeg",
+            "7.jpeg",
+            "8.jpeg",
+            "9.jpeg",
+            "10.jpeg", // <-- Add all filenames here
+            "11.jpeg",
+            "12.jpeg",
+            "13.jpeg",
+            "14.jpeg",
+            "15.jpeg",
+            "16.jpeg",
+            "17.jpeg"
+        ];
+
+        let currentIndex = 0;
+        const imgElement = document.getElementById('heroImage');
+
+        imgElement.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % imageFilenames.length;
+            imgElement.src = `assets/hero_images/${imageFilenames[currentIndex]}`;
+        });
+    </script>
+</body>
+
+</html>

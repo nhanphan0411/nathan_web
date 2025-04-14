@@ -1,0 +1,26 @@
+p {
+    font-size: 0.8rem;
+}
+
+.nav {
+    height: 5vh;
+    /* position : fixed;
+    background: transparent; */
+}
+
+.hero-container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-images {
+    height: 90vh;
+}
+
+#bio-container {
+    height: 100vh;
+}
+
+#bio {
+    width: 50%;
+}

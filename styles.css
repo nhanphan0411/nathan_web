@@ -61,9 +61,16 @@ p {
 /* -------------- MAIN IMAGES -------------- */
 
 
-#hero-image-container ::selection {
-        background-color: transparent;
+#hero-image-container::selection {
+    background-color: transparent;
+}
 
+#next::selection {
+    background-color: transparent;
+}
+
+#back::selection {
+    background-color: transparent;
 }
 
 #hero-images {
@@ -86,7 +93,7 @@ p {
 }
 
 
-#test {
+#hero-container {
     height: 90vh;
     width: 100vw;
     --bs-gutter-x: 0rem;
@@ -103,14 +110,6 @@ p {
         width: 100%;
         --bs-gutter-x: 0rem;
         padding: 0 3rem;
-    }
-    
-    #hero-container {
-        /* margin: auto auto; */
-        height: 80vh;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
     }
 
     #hero-images {

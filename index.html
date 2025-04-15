@@ -129,9 +129,27 @@
             imgAlt.textContent = imageData.altTexts[currentIndex];
         }
 
-        // Click image to go to next
-        imgContainer.addEventListener('click', () => {
-            updateImage(currentIndex + 1);
+        // Click image to go to next or back
+        imgContainer.addEventListener('click', (e) => {
+            const clickX = e.clientX;
+            const containerWidth = imgContainer.offsetWidth;
+
+            if (clickX < containerWidth / 2) {
+                // Left side: go back
+                updateImage(currentIndex - 1);
+            } else {
+                // Right side: go next
+                updateImage(currentIndex + 1);
+            }
+        });
+
+        // Press keyboard to go to next or back
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                updateImage(currentIndex - 1);
+            } else if (e.key === 'ArrowRight') {
+                updateImage(currentIndex + 1);
+            }
         });
 
         // Back button

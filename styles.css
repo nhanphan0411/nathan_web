@@ -15,6 +15,7 @@ p {
     width: 100vw;
     /* position : fixed;
     background: transparent; */
+    margin-top: 1rem;
     z-index: 10;
 }
 

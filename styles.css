@@ -89,7 +89,9 @@ p {
 }
 
 #description {
-    width: 100%;
+    width: 50%;
+    padding: 0.2rem 1rem;
+    margin: 0 auto;
 }
 
 
@@ -123,6 +125,10 @@ p {
         width: 100%;
         --bs-gutter-x: 0rem;
         padding: 0 5%;
+    }
+
+    #description {
+        width: 100%;
     }
 }
 

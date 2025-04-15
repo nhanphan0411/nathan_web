@@ -15,6 +15,7 @@ p {
     width: 100vw;
     /* position : fixed;
     background: transparent; */
+    z-index: 10;
 }
 
 #nav-left {
@@ -43,7 +44,7 @@ p {
     } */
 
     #nav-left {
-        text-align: center;
+        text-align: left;
     }
     
     #nav-center {
@@ -51,7 +52,7 @@ p {
     }
     
     #nav-right {
-        text-align: center;
+        text-align: right;
     }
 }
 

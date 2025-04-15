@@ -4,8 +4,20 @@ p {
 
 .nav {
     height: 5vh;
+    width: 100vw;
     /* position : fixed;
     background: transparent; */
+}
+
+@media screen and (max-width:480px) {
+    .nav {
+       width: auto;
+       padding-top: 1rem;
+    }
+
+    .nav>div>p {
+        text-align: center !important;
+    }
 }
 
 #hero-container {

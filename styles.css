@@ -15,18 +15,22 @@ p {
 
 #hero-images {
     height: 90vh;
+    margin: auto auto;
 }
 
 @media screen and (max-width:480px) {
     #hero-container {
-        margin: auto auto;
+        /* margin: auto auto; */
         height: 90vh;
+        display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     }
 
     #hero-images {
         width: 100vw;
         height: auto;
-        padding: 0 auto;
+        padding: 0 1rem;
     }
 }
 

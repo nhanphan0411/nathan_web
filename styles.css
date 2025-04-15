@@ -4,6 +4,10 @@ p {
     font-size: 0.8rem;
 }
 
+.row {
+    --bs-gutter-x: 0rem;
+}
+
 
 /* -------------- NAV -------------- */
 .nav {
@@ -13,43 +17,111 @@ p {
     background: transparent; */
 }
 
+#nav-left {
+    text-align: right;
+}
+
+#nav-center {
+    text-align: center;
+}
+
+#nav-right {
+    text-align: left;
+}
+
 @media screen and (max-width:480px) {
     .nav {
-       width: auto;
-       padding-top: 1rem;
+        width: auto;
+        padding-top: 1rem;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     /* .nav>div>p {
         line-height: 0.8rem !important;
         text-align: center !important;
     } */
+
+    #nav-left {
+        text-align: center;
+    }
+    
+    #nav-center {
+        text-align: center;
+    }
+    
+    #nav-right {
+        text-align: center;
+    }
 }
 
 
 /* -------------- MAIN IMAGES -------------- */
-#hero-container {
-    margin: 0 auto;
-    width: 100%;
+
+
+#hero-image-container ::selection {
+        background-color: transparent;
+
 }
 
 #hero-images {
-    height: 90vh;
-    margin: auto auto;
+    height: 80vh;
+    width: auto;
+    margin: 0 auto;
 }
 
+#hero-nav {
+    position: absolute;
+    left: 0;
+    top: 50vh;
+    width: 100%;
+    --bs-gutter-x: 0rem;
+    padding: 0 10%;
+}
+
+#description {
+    width: 100%;
+}
+
+
+#test {
+    height: 90vh;
+    width: 100vw;
+    --bs-gutter-x: 0rem;
+}
+
+#description {
+    margin-top: 0.5rem;
+}
+
+
 @media screen and (max-width:480px) {
+    #hero-nav {
+        position: absolute;
+        width: 100%;
+        --bs-gutter-x: 0rem;
+        padding: 0 3rem;
+    }
+    
     #hero-container {
         /* margin: auto auto; */
-        height: 90vh;
+        height: 80vh;
         display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
     #hero-images {
         width: 100vw;
         height: auto;
         padding: 0 1rem;
+    }
+
+    #hero-nav {
+        position: initial;
+        width: 100%;
+        --bs-gutter-x: 0rem;
+        padding: 0 5%;
     }
 }
 
@@ -68,4 +140,3 @@ p {
         width: 100%;
     }
 }
-

@@ -12,30 +12,44 @@
 </head>
 
 <body class="epi-thick text-dark">
-    <header class="nav row justify-content-center align-items-center mt-2 px-2">
-        <div class="col-4 text-end">
+    <header class="nav row justify-content-center align-items-center mt-4">
+        <div class="col-sm-4 col-12" id="nav-left">
             <p>index</p>
         </div>
-        <div class="col-4 text-center">
+        <div class="col-sm-4 col-12" id="nav-center">
             <p>Nathan Collis</p>
         </div>
-        <div class="col-4 text-start">
+        <div class="col-sm-4 col-12" id="nav-right">
             <p>onlyfans</p>
         </div>
-        
+
     </header>
 
-    <div id="hero-container">
-        <img id="hero-images" src="assets/hero_images/0.jpeg" class="d-block" style="cursor: pointer;">
+
+
+    <div class="row align-items-center g-2" id="test">
         <div class="row">
-            <div class="col-6">
-                <h1>←</h1>
+            <div class="row" id="hero-nav">
+                <div class="col-6 text-start">
+                    <a id="back" style="cursor: pointer;">
+                        <p><i>back</i></p>
+                    </a>
+                </div>
+                <div class="col-6 text-end">
+                    <a id="next" style="cursor: pointer;">
+                        <p><i>next</i></p>
+                    </a>
+                </div>
             </div>
-            <div class="col-6">
-                <h1>→</h>
+            <div class="row" id="hero-image-container" style="cursor: pointer;">
+                <img id="hero-images" src="assets/hero_images/0.jpeg" class="d-block">
+            </div>
+            <div class="row">
+                <p id="description" class="text-center">Image 0</p>
             </div>
         </div>
     </div>
+
 
     <section id="bio-container" class="d-flex align-items-center 100vh">
         <div id="bio" class="mx-4 px-4">
@@ -60,34 +74,76 @@
 
 
     <script>
-        const imageFilenames = [
-            "0.jpeg",
-            "1.jpeg",
-            "2.jpeg",
-            "3.jpeg",
-            "4.jpeg",
-            "5.jpeg",
-            "6.jpeg",
-            "7.jpeg",
-            "8.jpeg",
-            "9.jpeg",
-            "10.jpeg", 
-            "11.jpeg",
-            "12.jpeg",
-            "13.jpeg",
-            "14.jpeg",
-            "15.jpeg",
-            "16.jpeg",
-            "17.jpeg", // <-- Add all filenames here
-        ];
+
+        const imageData = {
+            images: [
+                "0.jpeg",
+                "1.jpeg",
+                "2.jpeg",
+                "3.jpeg",
+                "4.jpeg",
+                "5.jpeg",
+                "6.jpeg",
+                "7.jpeg",
+                "8.jpeg",
+                "9.jpeg",
+                "10.jpeg",
+                "11.jpeg",
+                "12.jpeg",
+                "13.jpeg",
+                "14.jpeg",
+                "15.jpeg",
+                "16.jpeg",
+                "17.jpeg"
+            ],
+            altTexts: [
+                "Image 0",
+                "Image 1",
+                "Image 2",
+                "Image 3",
+                "Image 4",
+                "Image 5",
+                "Image 6",
+                "Image 7",
+                "Image 8",
+                "Image 9",
+                "Image 10",
+                "Image 11",
+                "Image 12",
+                "Image 13",
+                "Image 14",
+                "Image 15",
+                "Image 16",
+                "Image 17"
+            ]
+        };
 
         let currentIndex = 0;
+        const imgContainer = document.getElementById('hero-image-container');
         const imgElement = document.getElementById('hero-images');
+        const imgAlt = document.getElementById('description');
 
-        imgElement.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % imageFilenames.length;
-            imgElement.src = `assets/hero_images/${imageFilenames[currentIndex]}`;
+        function updateImage(index) {
+            currentIndex = (index + imageData.images.length) % imageData.images.length;
+            imgElement.src = `assets/hero_images/${imageData.images[currentIndex]}`;
+            imgAlt.textContent = imageData.altTexts[currentIndex];
+        }
+
+        // Click image to go to next
+        imgContainer.addEventListener('click', () => {
+            updateImage(currentIndex + 1);
         });
+
+        // Back button
+        document.getElementById('back').addEventListener('click', () => {
+            updateImage(currentIndex - 1);
+        });
+
+        // Next button
+        document.getElementById('next').addEventListener('click', () => {
+            updateImage(currentIndex + 1);
+        });
+
     </script>
 </body>
 

@@ -17,6 +17,19 @@ p {
     height: 90vh;
 }
 
+@media screen and (max-width:480px) {
+    #hero-container {
+        margin: auto auto;
+        height: 90vh;
+    }
+
+    #hero-images {
+        width: 100vw;
+        height: auto;
+        padding: 0 auto;
+    }
+}
+
 #bio-container {
     height: 100vh;
 }
@@ -24,3 +37,10 @@ p {
 #bio {
     width: 50%;
 }
+
+@media screen and (max-width:480px) {
+    #bio {
+        width: 100%;
+    }
+}
+

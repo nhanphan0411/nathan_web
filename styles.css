@@ -1,7 +1,11 @@
+/* -------------- BASE --------------- */
+
 p {
     font-size: 0.8rem;
 }
 
+
+/* -------------- NAV -------------- */
 .nav {
     height: 5vh;
     width: 100vw;
@@ -16,10 +20,13 @@ p {
     }
 
     .nav>div>p {
+        line-height: 0.8rem !important;
         text-align: center !important;
     }
 }
 
+
+/* -------------- MAIN IMAGES -------------- */
 #hero-container {
     margin: 0 auto;
     width: 100%;
@@ -46,6 +53,8 @@ p {
     }
 }
 
+
+/* -------------- BIO -------------- */
 #bio-container {
     height: 100vh;
 }
